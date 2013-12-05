@@ -125,13 +125,6 @@ class AWS_Service_Watch extends AWS_Service {
             return true;
         }
         
-        // Profile sending.
-        if (TRUE === Kohana::$profiling)
-        {
-            // Start a new benchmark
-            $benchmark = Profiler::start(__CLASS__, $url);
-        }
-        
         foreach (self::$_data as $data)
         {
             // Profile sending.
